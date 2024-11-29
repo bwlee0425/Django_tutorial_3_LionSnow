@@ -22,7 +22,8 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.HomeView.as_view(), name='index'),
-    path("cafe/", include("cafe.urls")),
+    path('cafe/', include('cafe.urls')),
+    path('blog/', include('blog.urls')),
 ]
 
 if settings.DEBUG:

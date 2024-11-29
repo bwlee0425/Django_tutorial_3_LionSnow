@@ -1,3 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}카페사나리아{% endblock %}
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-4 text-primary">카페 사나리아</h1>
+  </div>
 <h1>{{menu_to_page.menu_name}}</h1>
 
 <ul>
@@ -11,3 +18,5 @@
 <a href="{% url 'cafe:add_option' menu_to_page.id %}">옵션추가</a>
 <a href="{% url 'cafe:menu_update' menu_to_page.id %}">업데이트</a>
 <a href="{% url 'cafe:cafe_home' %}"></a>
+
+{% endblock %}

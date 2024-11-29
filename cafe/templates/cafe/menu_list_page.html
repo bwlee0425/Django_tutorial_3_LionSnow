@@ -1,3 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}카페사나리아{% endblock %}
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-4 text-primary">카페 사나리아</h1>
+  </div>
 <h1>{{cafe_name}} 메뉴 리스트</h1>
 <a href="{% url 'cafe:cafe_home' %}">Home</a>
 
@@ -11,3 +18,4 @@
 
 <a href="{% url 'cafe:menu_add_page' %}">메뉴추가</a>
 <a href="{% url 'cafe:cafe_home' %}"></a>
+{% endblock %}

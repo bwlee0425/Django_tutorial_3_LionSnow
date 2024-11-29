@@ -10,17 +10,14 @@
 <body class="container">
     <nav class="navbar bg-primary navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Lion Django Webb Programming</a>
+          <a class="navbar-brand" href="{% url 'index' %}">LiONsnow</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Blog</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'blog:index' %}">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">설문조사</a>
@@ -29,7 +26,7 @@
                 <a class="nav-link active" aria-current="page" href="#">뉴스</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'cafe:cafe_home' %}">사나리아Cafe</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'cafe:cafe_home' %}">카페사나리아</a>
               </li>              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,7 +38,11 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </li>             
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'blog:index' %}">Blog</a>
+              </li>
+             
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -53,6 +54,12 @@
 
     {% block content %}
     <h1>나는 멋쟁이 백엔드 개발자!!!</h1>
+    {% endblock %}
+    {% block footer %}
+    <footer class="fixed-bottom bg-info container text-center">
+      <h4>Like Lion Backend Django </h4>
+      <p>Copyright by Lion 2024</p>
+    </footer> 
     {% endblock %}
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
