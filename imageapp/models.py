@@ -45,3 +45,10 @@ class ImagePost(models.Model):
     # 구독자 수 반환
     def get_subscriber_count(self):
         return self.subscribers.count()
+
+    class ImageappImage(models.Model):
+        title = models.CharField(max_length=255)
+        sg3image = models.ImageField(upload_to='imageapp_images/') # 'imagepost' class 의 image 변수설정이 먼저 적용됨.
+        
+        def __str__(self):
+            return self.title

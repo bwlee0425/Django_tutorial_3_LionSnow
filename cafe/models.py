@@ -14,3 +14,10 @@ class Option(models.Model):
 
     def __str__(self) -> str:
         return f"{self.option_name}_{self.option_price}원"
+    
+class CafeImage(models.Model):
+    title = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='cafe_images/')
+    
+    def __str__(self):
+        return self.title

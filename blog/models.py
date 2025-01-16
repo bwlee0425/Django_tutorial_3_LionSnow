@@ -33,3 +33,10 @@ class Post(models.Model):
         indexes = [
             models.Index(fields=['-create_at'])
         ]
+
+    class BlogImage(models.Model):
+        title = models.CharField(max_length=255)
+        image = models.ImageField(upload_to='blog_images/')
+        
+        def __str__(self):
+            return self.title

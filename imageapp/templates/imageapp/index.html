@@ -14,7 +14,8 @@
         <div class="col-md-4 mb-4">
             <div class="card">
                 <a href="{% url 'imageapp:image_detail' image.id %}">
-                <img src="/media/{{ image.image }}" class="card-img-top" alt="{{ image.title }}">
+                <!--<img src="/media/{{ image.image }}" class="card-img-top" alt="{{ image.title }}"> 하드코딩된 경로를 django가 자동설정하게 바꿔줌-->
+                <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.title }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ image.title }}</h5>
                     <p class="card-text">{{ image.description }}</p>
